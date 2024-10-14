@@ -1,0 +1,13 @@
+Table name: used_cars
+
+id                                      BIGINT                 PRIMARY_KEY     AUTO_INCREMENT
+brand                                   VARCHAR(255)            NOT_NULL
+model                                   VARCHAR(255)            NOT_NULL
+fuel_type                               VARCHAR(255)            NOT_NULL
+license_plate                           VARCHAR(255)            NOT_NULL        UNIQUE
+chassis_number                          VARCHAR(255)            NOT_NULL        UNIQUE
+vehicle_registration_date               DATE                    NOT_NULL                            
+vehicle_damages                         TEXT                    NULL
+description                             TEXT                    NULL
+available                               BOOLEAN                 NOT_NULL        DEFAULT(true)
+price                                   VARCHAR(255)            NOT_NULL
