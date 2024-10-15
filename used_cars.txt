@@ -4,7 +4,7 @@ id                                      BIGINT                 PRIMARY_KEY     A
 brand                                   VARCHAR(255)            NOT_NULL
 model                                   VARCHAR(255)            NOT_NULL
 fuel_type                               VARCHAR(255)            NOT_NULL
-kilometers                              MEDIUMINT               NOT_NULL
+kilometers                              MEDIUMINT               UNSIGNED        NOT_NULL
 number_of_owners                        VARCHAR(255)            NOT_NULL
 license_plate                           VARCHAR(255)            NOT_NULL        UNIQUE
 chassis_number                          VARCHAR(255)            NOT_NULL        UNIQUE
