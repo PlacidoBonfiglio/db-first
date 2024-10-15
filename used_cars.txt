@@ -1,15 +1,29 @@
 Table name: used_cars
 
 id                                      BIGINT                 PRIMARY_KEY     AUTO_INCREMENT
-brand                                   VARCHAR(255)            NOT_NULL
-model                                   VARCHAR(255)            NOT_NULL
-fuel_type                               VARCHAR(255)            NOT_NULL
+brand                                   VARCHAR(30)             NOT_NULL
+model                                   VARCHAR(80)             NOT_NULL
+vehicle_type                            VARCHAR(20)             NOT_NULL
+fuel_type                               VARCHAR(80)             NOT_NULL
+hp                                      SMALLINT                UNSIGNED        NOT_NULL
+cc                                      SMALLINT                UNSIGNED        NOT_NULL
+traction_type                           VARCHAR(50)             NOT_NULL
+number_of_gears                         TINYINT                 UNSIGNED        NOT_NULL
 kilometers                              MEDIUMINT               UNSIGNED        NOT_NULL
-number_of_owners                        VARCHAR(255)            NOT_NULL
-license_plate                           VARCHAR(255)            NOT_NULL        UNIQUE
-chassis_number                          VARCHAR(255)            NOT_NULL        UNIQUE
+emission_eu_class                       VARCHAR(10)             NOT_NULL        
+average_cosumption                      FLOAT(4,1)              UNSIGNED        NULL        
+doors                                   TINYINT                 UNSIGNED        NOT_NULL
+seats                                   TINYINT                 UNSIGNED        NOT_NULL
+rim_size                                TINYINT                 UNSIGNED        NULL
+weight                                  SMALLINT                UNSIGNED        NOT_NULL
+lenght                                  SMALLINT                UNSIGNED        NOT_NULL
+height                                  SMALLINT                UNSIGNED        NOT_NULL
+width                                   SMALLINT                UNSIGNED        NOT_NULL
+number_of_owners                        TINYINT                 UNSIGNED        NOT_NULL
+license_plate                           CHAR(7)                 NULL            UNIQUE
+vehicle_identification_number           CHAR(17)                NOT_NULL        UNIQUE
 vehicle_registration_date               DATE                    NOT_NULL                            
 vehicle_damages                         TEXT                    NULL
 description                             TEXT                    NULL
-available                               BOOLEAN                 NOT_NULL        DEFAULT(true)
-price                                   VARCHAR(255)            NOT_NULL
+is_available                            BOOLEAN                 NOT_NULL        DEFAULT(true)
+price                                   DECIMAL(9,2)            NOT_NULL
